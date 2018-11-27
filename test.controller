@@ -1,0 +1,15 @@
+<template config="$scope">
+  <div>
+    {{a}}
+  </div>
+</template>
+
+<script>
+  export default function(scope){
+    scope.a = 10
+  }
+</script>
+
+<style scoped>
+
+</style>
