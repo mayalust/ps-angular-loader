@@ -1,6 +1,6 @@
 {
   "name": "ps-angular-loader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "./lib/index.js",
   "scripts": {
@@ -27,11 +27,12 @@
     "less-loader": "^4.1.0",
     "loader-utils": "^1.1.0",
     "mini-css-extract-plugin": "^0.4.5",
-    "proudsmart-template": "^1.0.27",
-    "ps-ultility": "^1.0.37",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.27.1"
   },
-  "devDependencies": {}
+  "dependencies": {
+    "proudsmart-template": "^1.0.27",
+    "ps-ultility": "^1.0.37",
+  }
 }
