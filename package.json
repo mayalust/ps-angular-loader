@@ -2,7 +2,7 @@
   "name": "ps-angular-loader",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,7 +16,22 @@
     "url": "https://github.com/mayalust/ps-angular-loader/issues"
   },
   "homepage": "https://github.com/mayalust/ps-angular-loader#readme",
-  "dependencies": {
-    "webpack": "^4.26.1"
-  }
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.2.0",
+    "angular": "^1.7.5",
+    "angular-route": "^1.7.5",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^2.0.0",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "loader-utils": "^1.1.0",
+    "mini-css-extract-plugin": "^0.4.5",
+    "proudsmart-template": "^1.0.27",
+    "ps-ultility": "^1.0.37",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.27.1"
+  },
+  "devDependencies": {}
 }

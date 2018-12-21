@@ -1,5 +1,7 @@
-const webpack = require("webpack"),
+const MiniCssExtractPlugin = require("mini-css-extract-plugin"),
+  webpack = require("webpack"),
   pathLib = require("path"),
+  { explainers } = require("./lib/angular-explainer.js"),
   { angularLoaderPlugin } = require("./lib/index"),
   webpackConfig = {
     entry : {
@@ -13,21 +15,32 @@ const webpack = require("webpack"),
     },
     module : {
       rules : [{
-        test : /\.controller$/,
+        test : /\.js$/,
+        use:{
+          loader:'babel-loader'
+        },
+        exclude:/node_modules/
+      },{
+        test : /\.angular/,
         use : [{
-          loader : pathLib.resolve(__dirname, "./lib/index.js"),
-          options : {
-            type : "controller"
-          }
+          loader : pathLib.resolve(__dirname, "./lib/index.js")
         }]
+      },{
+        test : /\.css$/,
+        use : [{
+          loader : MiniCssExtractPlugin.loader
+        },"css-loader"]
+      },{
+        test : /\.less$/,
+        use : [{
+          loader : MiniCssExtractPlugin.loader
+        },"css-loader","less-loader"]
       }]
     },
-    plugins : [new angularLoaderPlugin()],
-    resolve: {
-      alias: {
-        'vue': 'vue/dist/vue.js'
-      }
-    }
+    plugins : [new angularLoaderPlugin(), new MiniCssExtractPlugin({
+      filename: "[name].css",
+      chunkFilename: "[id].css"
+    })]
   },
   compiler = webpack(webpackConfig, (err, state) => {
     if(err === null){
