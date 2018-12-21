@@ -1,7 +1,0 @@
-*.babelrc
-main.js
-package-lock.json
-*.controller
-webpackRun.js
-build/
-node_modules
