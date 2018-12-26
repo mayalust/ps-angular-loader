@@ -1,6 +1,6 @@
 {
   "name": "ps-angular-loader",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "",
   "main": "./lib/index.js",
   "scripts": {
@@ -32,7 +32,7 @@
     "webpack": "^4.28.1"
   },
   "dependencies": {
-    "proudsmart-template": "^1.0.27",
+    "proudsmart-template": "^1.0.30",
     "ps-ultility": "^1.0.37"
   }
 }
