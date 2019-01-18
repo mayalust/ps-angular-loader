@@ -1,6 +1,6 @@
 {
   "name": "ps-angular-loader",
-  "version": "1.0.53",
+  "version": "1.0.54",
   "description": "",
   "main": "./lib/index.js",
   "scripts": {
